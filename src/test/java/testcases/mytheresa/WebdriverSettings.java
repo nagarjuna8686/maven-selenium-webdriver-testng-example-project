@@ -2,6 +2,10 @@ package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import os
+from selenium.webdriver.chrome.options import Options 
+from selenium import webdriver 
+
 import org.openqa.selenium.By;
 
 public class WebdriverSettings {
@@ -13,7 +17,6 @@ public class WebdriverSettings {
                 options.addArguments("start-maximized"); // open Browser in maximized mode
                 options.addArguments("disable-infobars"); // disabling infobars
                 options.addArguments("--disable-extensions"); // disabling extensions
-                options.addArguments("--disable-gpu"); // applicable to windows os only
                 options.addArguments("--no-sandbox");
 		WebDriver driver = new ChromeDriver(options);
 		driver.get("https://google.com");
