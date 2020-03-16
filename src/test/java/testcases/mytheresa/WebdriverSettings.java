@@ -7,11 +7,17 @@ import org.openqa.selenium.By;
 public class WebdriverSettings {
 	
 	public WebDriver driverSettings() {
-		chrome_options.add_argument("no-sandbox");
-                chrome_options.add_argument("--disable-extensions");
-                chrome_options.add_argument("--headless");
 		System.setProperty("webdriver.chrome.driver", "lib/chromedriver");
-		WebDriver driver = new ChromeDriver();
+		ChromeOptions options = new ChromeOptions();
+                options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+                options.addArguments("start-maximized"); // open Browser in maximized mode
+                options.addArguments("disable-infobars"); // disabling infobars
+                options.addArguments("--disable-extensions"); // disabling extensions
+                options.addArguments("--disable-gpu"); // applicable to windows os only
+                options.addArguments("--no-sandbox");
+		WebDriver driver = new ChromeDriver(options);
+		driver.get("https://google.com");
+		//WebDriver driver = new ChromeDriver();
 		return driver;
 	}
 
