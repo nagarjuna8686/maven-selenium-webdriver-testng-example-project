@@ -2,10 +2,9 @@ package testcases.mytheresa;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import os
-from selenium.webdriver.chrome.options import Options 
-from selenium import webdriver 
-
+import os;
+from selenium.webdriver.chrome.options import Options ;
+from selenium import webdriver; 
 import org.openqa.selenium.By;
 
 public class WebdriverSettings {
